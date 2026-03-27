@@ -23,9 +23,10 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npx playwright test --reporter=allure-playwright
+        run: npx playwright test
 
       - name: Generate Allure Report
+        if: always()
         uses: simple-elf/allure-report-action@v1.7
         with:
           allure_results: allure-results
@@ -33,9 +34,15 @@ jobs:
           allure_history: allure-history
 
       - name: Upload Allure Report
+        if: always()
         uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
         with:
           name: allure-report
           path: allure-report/
           retention-days: 30
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
