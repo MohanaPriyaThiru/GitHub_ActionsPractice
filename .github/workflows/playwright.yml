@@ -44,11 +44,10 @@ jobs:
       # Run tests (don't fail pipeline)
       - name: Run Playwright tests
         run: npx playwright test || true
-       # ✅ Install Allure CLI (official)
+      # Install Allure CLI (official)
       - name: Install Allure CLI
         run: |
-          sudo apt-get update
-          sudo apt-get install -y allure
+          run: npm install -g allure-commandline --save-dev
       # Generate Allure report
       - name: Generate Allure Report
         if: always()
