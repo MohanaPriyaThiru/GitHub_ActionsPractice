@@ -46,13 +46,12 @@ jobs:
         run: npx playwright test || true
       # Install Allure CLI (official)
       - name: Install Allure CLI
-        run: |
-          run: npm install -g allure-commandline --save-dev
+        run: npm install -g allure-commandline --save-dev
       # Generate Allure report
       - name: Generate Allure Report
         if: always()
         run: |
-          allure generate allure-results -o allure-report --clean
+          allure generate allure-results -o allure-report --clean ||true
 
       # Debug step (VERY IMPORTANT for troubleshooting)
       - name: Debug Allure Files
