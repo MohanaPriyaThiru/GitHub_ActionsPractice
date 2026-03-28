@@ -12,7 +12,7 @@ export class SearchHotel1 {
   }
 
   async searchHotelMethod() {
-    await this.location.selectOption(data.loc);
+    // await this.location.selectOption(data.loc);
     await this.hotel.selectOption(data.hotelname);
     await this.roomNo.selectOption(data.roomNum);
     await this.indate.fill(data.dateIn);

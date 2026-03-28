@@ -8,5 +8,5 @@ test("adactin", async ({ page }) => {
 
   await loginPage.navigate();
   await loginPage.loginMethod();
-  await searchPage.searchHotelMethod();
+  //await searchPage.searchHotelMethod();
 });

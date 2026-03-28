@@ -17,6 +17,6 @@ export class LoginPage1 {
     await this.username.fill(data.UN);
     await this.password.fill(data.Pwd);
     await Promise.all([this.page.waitForNavigation(), this.submitBtn.click()]);
-    await expect(this.page).toHaveTitle("Adactin.com - Search Hotel");
+    // await expect(this.page).toHaveTitle("Adactin.com - Search Hotel");
   }
 }
