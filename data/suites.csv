@@ -1,2 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","9567","adactin","chromium","2026-02-12","passed","2026-02-12","","adactin.spec.js","",""
+"","3463","adactin","firefox","2026-03-28","passed","2026-03-28","","adactin.spec.js","",""
+"","2068","adactin","chromium","2026-03-28","passed","2026-03-28","","adactin.spec.js","",""
+"","5403","adactin","webkit","2026-03-28","passed","2026-03-28","","adactin.spec.js","",""
