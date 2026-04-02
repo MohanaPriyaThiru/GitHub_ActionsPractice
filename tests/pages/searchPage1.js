@@ -1,4 +1,5 @@
-const data = require("../../valueTest/dataAdactin.json");
+// const data = require("../../valueTest/dataAdactin.json");
+import data from "../../testData/adactinTestData.json";
 export class SearchHotel1 {
   constructor(page) {
     this.page = page;
@@ -12,7 +13,7 @@ export class SearchHotel1 {
   }
 
   async searchHotelMethod() {
-    // await this.location.selectOption(data.loc);
+    await this.location.selectOption(data.loc);
     await this.hotel.selectOption(data.hotelname);
     await this.roomNo.selectOption(data.roomNum);
     await this.indate.fill(data.dateIn);
