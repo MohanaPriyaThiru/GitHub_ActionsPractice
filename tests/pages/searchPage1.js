@@ -19,6 +19,7 @@ export class SearchHotel1 {
     await this.indate.fill(data.dateIn);
     await this.outdate.fill(data.dateOut);
     await this.adultNo.selectOption(data.adult);
-    await this.search.click();
+    await this.search.click(); 
+    //check
   }
 }
